@@ -21,7 +21,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|DM+Serif+Display:400,400i,700,700i,900,900i';
 
 /*
-font-family: 'Playfair Display', serif;
+font-family: 'DM+Serif+Display:', serif;
 font-family: 'Lato', sans-serif;
 */
 
@@ -168,7 +168,7 @@ font-family: 'Lato', sans-serif;
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     background-color: #FDF3EC;
 
@@ -201,8 +201,25 @@ body {
 }
 
 
-/* landing
+/* home
 ==================================================*/
+
+#home {
+    background-image: radial-gradient(circle at 6.63% 13.61%, #c9d8fa 0, #ced6f9 6.25%, #d4d5f8 12.5%, #dad3f6 18.75%, #e0d2f3 25%, #e5d0f0 31.25%, #eacfed 37.5%, #eecee9 43.75%, #f2cde5 50%, #f5cce1 56.25%, #f8ccdc 62.5%, #facbd8 68.75%, #fbcbd3 75%, #fcccce 81.25%, #fcccca 87.5%, #fccdc6 93.75%, #facdc2 100%);
+    background-size: cover;
+    height: 100vh;
+}
+
+.table-cell {
+    display: block;
+    vertical-align: middle;
+}
+
+.disply-table {
+    display: flex;
+    height: 100vh;
+}
+
 
 header {
     text-align: center;
@@ -257,34 +274,79 @@ a.active {
     color: #425BB5;
 }
 
-.uxui {
+/* intro faded ******************* */
+.intro {
+
+  margin-top: 20vh;
   color: #000a42;
+
+& p.fadeIn {
+  font-size: 42px;
+
+    & span{
+      opacity: 0;
+      transform: translateX(30px);
+      animation: fadeIn 1.8s ease-out forwards;
+      display:inline-block;
+    }
+
+    & span:nth-of-type(2){
+      animation-delay: 1.8s;
+    }
+
+    & span:nth-of-type(3){
+      animation-delay: 3s;
+    }
+
+    & span:nth-of-type(4){
+      animation-delay: 4s;
+    }
+
+    & span:nth-of-type(5){
+      animation-delay: 5.3s;
+    }
+
+    & span:nth-of-type(6){
+      animation-delay: 5.3s;
+    }
+
+    & span:nth-of-type(7){
+      animation-delay: 6.8s;
+    }
+
+
+    @keyframes fadeIn{
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }
 
-.firma {
-  padding-right: 20px;
-  padding-bottom: 150px;
-}
+    .uxui {
+      justify-content: flex-end;
+      margin-top: 150px;
+      color: #AE1B2E;
+      font-family: 'DM+Serif+Display', serif;
+      font-size: 80px;
+      line-height: 70px;
 
+    }
+
+    .firma {
+      text-align: right;
+      font-size: 26px;
+      font-weight: bold;
+      color: #000A42;
+      padding-top: 10px;
+    }
+
+/* end intro faded*********************** */
 
 /* home section
 ==================================================*/
 
-#home {
-    background-image: radial-gradient(circle at 6.63% 13.61%, #c9d8fa 0, #ced6f9 6.25%, #d4d5f8 12.5%, #dad3f6 18.75%, #e0d2f3 25%, #e5d0f0 31.25%, #eacfed 37.5%, #eecee9 43.75%, #f2cde5 50%, #f5cce1 56.25%, #f8ccdc 62.5%, #facbd8 68.75%, #fbcbd3 75%, #fcccce 81.25%, #fcccca 87.5%, #fccdc6 93.75%, #facdc2 100%);
-    background-size: cover;
-    height: 100vh;
-}
-
-.table-cell {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.disply-table {
-    display: table;
-    height: 100vh;
-}
 
 
 /* about section
@@ -640,13 +702,13 @@ fieldset {
 
 @media (max-width: 500px) {
     h1 {
-        font-family: 'Playfair Display', serif;
+        font-family: 'DM Serif Display:', serif;
         font-size: 50px;
         line-height: 50px;
     }
     #home,
     .disply-table {
-        height: 600px;
+        height: 900px;
     }
     .about-border {
         width: 265px;
