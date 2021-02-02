@@ -21,6 +21,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="css/jquery-1.11.3.min.js.download"></script>
+    <script src="css/highlight.min.js.download"></script>
+    <script src="css/aos.js.download"></script>
+
+    <!-- ritardo freccia di home -->
+    <script>setTimeout(function(){
+      document.getElementById('div1').style.visibility = "visible";},5600);
+    </script>
 
 </head>
 
@@ -29,10 +37,8 @@
     <!-- Preloader -->
     <div id="preloader">
         <div id="status">
-
           <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
           </div>
-
         </div>
     </div>
     <!-- ./Preloader -->
@@ -41,8 +47,8 @@
     <header class="navbar-fixed-top">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Chi sono</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">chi sono</a></li>
                 <li><a href="#projects">progetti</a></li>
                 <li><a href="#contact">contatti</a></li>
             </ul>
@@ -53,16 +59,21 @@
     <!-- home -->
     <div class="section" id="home" data-stellar-background-ratio="0.2">
         <div class="container">
-                <div class="intro" data-aos="fade-up">
+                <div class="intro">
                   <p class="fadeIn">
-                    <span style="display: block; padding-bottom:28px;">High Mindset,</span>
-                    <span style="display: block; padding-bottom:28px;">Self-learning,</span>
-                    <span style="display: block; padding-bottom:40px;">Self-building.</span>
-                    <span style="padding-bottom:24px; line-height: 1.2;">da designer meccanico,</span>
+                    <span style="display: block; padding-bottom:3.5vh;">High Mindset,</span>
+                    <span style="display: block; padding-bottom:3.5vh;">Self-learning,</span>
+                    <span style="display: block; padding-bottom:5vh;">Self-building.</span>
+                    <span style="padding-bottom:1.8vh; line-height: 5.5vh;">da designer meccanico,</span>
                     <span>al digital.</span>
-                    <span style="display: flex; padding-bottom:32px;" class="uxui">UX &<br> UX Designer</span>
-                    <span style="display: block; padding-bottom:32px;" class="firma">Guebre Aziz</span>
+               <!-- <span style="display: flex; padding-bottom:32px;" class="uxui">UX &<br> UI Designer</span>
+                    <span style="display: flex;" class="firma">Guebre Aziz</span> -->
                   </p>
+                </div>
+                <div id="div1" style="visibility:hidden;">
+                    <span class="hero__scroll aos-init aos-animate navbar" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="5000" data-aos-offset="1500" >
+                     <a href="#about" class="chevron bottom"><br><br></a>
+                    </span>
                 </div>
         </div>
     </div>
@@ -73,10 +84,13 @@
     <div class="section" id="about">
         <div class="container">
             <div class="col-md-6" data-aos="fade-up">
-                <div class="h-50"></div>
-                <p>Dopo oltre 5 anni di carriera come designer meccanico, entro nel digitale ove nel campo UX/UI
-                  design e sviluppo web, esplodono tutti colori e sfacettature dei miei interessi e passioni.
+                <div class="presentazione">
+                <h2 class="nome">Guebre Aziz</h2>
+                <p>Dopo oltre 5 anni di carriera come designer meccanico, ho deciso di immergermi nel digitale, ove nel campo UX/UI
+                  design e sviluppo web, esplodono tutti i colori e sfacettature dei miei interessi e passioni.<br><br>
+                  Si dice che "una buona eperienza non si nota", ebbene, la mia priorità è progettare esperienza gradevole che non si nota.
                 </p>
+                </div>
             </div>
             <div class="col-md-6 about-img-div">
                 <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
@@ -316,6 +330,23 @@
 
     <!--  main script  -->
     <script src="js/custom.js"></script>
+
+    <script>
+      AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+      });
+    </script>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      $('.hero__scroll').on('click', function(e) {
+        $('html, body').animate({
+          scrollTop: $(window).height()
+        }, 1200);
+      });
+    </script>
 </body>
 
 </html>
