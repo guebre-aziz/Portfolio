@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Wexchange-Branding</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+
+	<script type="text/javascript">
+		var deleteLog = false;
+
+		$(document).ready(function() {
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'Page4', 'Page5', 'Page6', 'Page7', 'Page8', 'Page9', 'Page10', 'Page11'],
+	    		navigation: {
+		            'textColor': '#000A42',
+		            'bulletsColor': '#F9D6BC',
+		            'position': 'right',
+		            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6', 'Page 7', 'Page 8', 'Page 9', 'Page 10', 'Page 11']
+		        }
+			});
+	    });
+    </script>
+
+</head>
+
+<body>
+<div class="padd">
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+				<a><img src="img/wexchange-01.jpg" /></a>
+	    </div>
+	    <div class="section" id="section2">
+				<a><img src="img/wexchange-02.jpg" /></a>
+	    </div>
+	    <div class="section" id="section3">
+				<a><img src="img/wexchange-03.jpg" /></a>
+			</div>
+			<div class="section" id="section4">
+				<a><img src="img/wexchange-04.jpg" /></a>
+			</div>
+			<div class="section" id="section5">
+				<a><img src="img/wexchange-05.jpg" /></a>
+			</div>
+			<div class="section" id="section6">
+				<a><img src="img/wexchange-06.jpg" /></a>
+			</div>
+			<div class="section" id="section7">
+				<a><img src="img/wexchange-07.jpg" /></a>
+			</div>
+			<div class="section" id="section8">
+				<a><img src="img/wexchange-08.jpg" /></a>
+			</div>
+			<div class="section" id="section9">
+				<a><img src="img/wexchange-09.jpg" /></a>
+			</div>
+			<div class="section" id="section10">
+				<a><img src="img/wexchange-10.jpg" /></a>
+			</div>
+			<div class="section" id="section11">
+				<a><img src="img/wexchange-11.jpg" /></a>
+			</div>
+
+	</div>
+</div>
+</body>
+
+</html>

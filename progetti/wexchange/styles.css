@@ -1,0 +1,30 @@
+
+body{
+  width: 90vw;
+  height: 90vh;
+  padding-top: 0;
+  background-color: #fdf3ec;
+}
+
+.section{
+	text-align: center;
+}
+
+.padd {
+  padding-top: 0PX;
+  padding-left: 80px;
+  padding-right: 80px;
+
+}
+
+.section {
+ width: 90vw;
+ height: 90vh;
+
+}
+
+a img {
+
+    max-width: 90%;
+    max-height: 90%;
+}

@@ -1,10 +1,10 @@
 <?php
 
-    $to = "mr3essa@gmail.com";
+    $to = "guebreaziz@gmail.com";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $headers = "From: $from";
-    $subject = "You have a message.";
+    $subject = "hai un messaggio da web portfolio.";
 
     $fields = array();
     $fields{"name"} = "name";
@@ -12,9 +12,9 @@
     $fields{"phone"} = "phone";
     $fields{"message"} = "message";
 
-    
 
-    $body = "Here is what was sent:\r\n"; 
+
+    $body = "Here is what was sent:\r\n";
 
     foreach($fields as $a => $b){$body .= $b." : ".$_REQUEST[$a]."\r\n"; }
 
