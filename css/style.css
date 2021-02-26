@@ -1,35 +1,17 @@
-/* Table of Content
-==================================================
-	- Google fonts & font family -
-	- typography -
-	- General -
-    - Preloader -
-	- Header -
-    - home section -
-    - About section -
-    - experience section -
-    - projects section -
-    - Contact section -
-    - Responsive media queries -
-*/
 /* Google fonts & font family
 ==================================================*/
 @import "https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|DM+Serif+Display:400,400i,700,700i,900,900i";
-/*
-font-family: 'DM+Serif+Display:', serif;
-font-family: 'Lato', sans-serif;
-*/
-/* scroll fluido */
+/* scroll fluido ==================================*/
 html {
   scroll-behavior: smooth; }
 
 /* --------scrollbar--------- */
-/* Works on Firefox */
+/* per  Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #F9D6BC white; }
 
-/* Works on Chrome, Edge, and Safari */
+/* per Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px; }
 
@@ -40,7 +22,7 @@ html {
   background-color: #F9D6BC;
   border-radius: 0px; }
 
-/* --------fine scrollbar--------- */
+/* fine scroll fluido =========================================*/
 /* preloader ==================================================*/
 #preloader {
   position: fixed;
@@ -148,7 +130,7 @@ html {
     opacity: 0; }
   to {
     opacity: 1; } }
-/* Corpo
+/* body
 ==================================================*/
 body {
   font-family: 'Lato', sans-serif;
@@ -159,14 +141,6 @@ body {
     font-family: 'DM+Serif+Display', serif;
     font-size: 80px;
     line-height: 70px; }
-  body h4 {
-    font-family: 'Lato', sans-serif;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-    position: relative;
-    color: #AE1B2E;
-    margin-left: 40px;
-    font-weight: 700; }
 
 .size-50 {
   font-size: 50px;
@@ -174,12 +148,12 @@ body {
   color: #000a42; }
 
 /* home
-================================================= */
+==================================================== */
 #home {
   background-image: radial-gradient(circle at 6.63% 13.61%, #c9d8fa 0, #ced6f9 6.25%, #d4d5f8 12.5%, #dad3f6 18.75%, #e0d2f3 25%, #e5d0f0 31.25%, #eacfed 37.5%, #eecee9 43.75%, #f2cde5 50%, #f5cce1 56.25%, #f8ccdc 62.5%, #facbd8 68.75%, #fbcbd3 75%, #fcccce 81.25%, #fcccca 87.5%, #fccdc6 93.75%, #facdc2 100%);
   background-size: cover;
   height: 100vh;
-  padding: 100px; }
+  padding: 80px; }
 
 header {
   text-align: center;
@@ -225,31 +199,31 @@ a:hover {
 a.active {
   color: #AE1B2E; }
 
-/* intro faded ************************ */
+/* intro a comparsa ************************ */
 .intro {
   margin-top: 15vh;
   color: #000a42; }
-  .intro p.fadeIn {
+  .intro .fadeIn {
     font-size: 5vh; }
-    .intro p.fadeIn span {
+    .intro .fadeIn span {
       opacity: 0;
       transform: translateX(30px);
       animation: fadeIn 1.2s ease-out forwards;
       display: inline-block; }
-    .intro p.fadeIn span:nth-of-type(2) {
+    .intro .fadeIn span:nth-of-type(2) {
       animation-delay: 1.5s; }
-    .intro p.fadeIn span:nth-of-type(3) {
+    .intro .fadeIn span:nth-of-type(3) {
       animation-delay: 2.5s; }
-    .intro p.fadeIn span:nth-of-type(4) {
+    .intro .fadeIn span:nth-of-type(4) {
       animation-delay: 3.5s; }
-    .intro p.fadeIn span:nth-of-type(5) {
+    .intro .fadeIn span:nth-of-type(5) {
       animation-delay: 4.3s; }
 @keyframes fadeIn {
   to {
     opacity: 1;
     transform: translateY(0); } }
-/* fine intro faded*********************** */
-/* social ******************************** */
+/* fine intro a comparsa*********************** */
+/* social fisso a sinistra************************************* */
 .social {
   position: fixed;
   top: 40vh;
@@ -265,7 +239,7 @@ a.active {
 .social li:hover {
   -webkit-filter: brightness(220%); }
 
-/* fine social */
+/* fine social fisso a sinistra ************ */
 /* freccia animata home ******************* */
 .hero__scroll {
   justify-content: center;
@@ -280,7 +254,7 @@ a.active {
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite; }
 
-/* frecce animate ************************** */
+/* frecce animate a disposizione  ************************** */
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: translate(0, 0);
@@ -332,15 +306,16 @@ a.active {
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg); }
 
-/* frecce animate ************************* */
+/*fine  frecce animate a disposizione ****** */
 /* fine  home
-==================================================*/
+====================================================*/
 /* chi sono
 ==================================================*/
 .presentazione .nome {
   font-family: 'DM+Serif+Display', serif;
   font-size: 50px;
-  padding-bottom: 6vh; }
+  padding-bottom: 6vh;
+  color: #000a42; }
 .presentazione p {
   padding-left: 30px;
   padding-bottom: 15px; }
@@ -434,41 +409,44 @@ a:hover + span {
 
 /* Responsive media queries
 ==================================================*/
-@media (max-width: 768px) {
-  .timeline-event-copy {
-    width: 90%;
-    left: 2em; } }
 @media (max-width: 500px) {
-  h1 {
-    font-family: 'DM Serif Display:', serif;
-    font-size: 50px;
-    line-height: 50px; }
+  .intro {
+    margin-top: 10vh; }
+    .intro .fadeIn {
+      font-size: 5vh;
+      line-height: normal;
+      padding-top: 25px; }
 
-  /*    #home,
-      .disply-table {
-          height: 900px;
-      }
-  --*/
   .about-border {
     width: 265px; }
 
   .portfolio .categories-grid .categories ul li {
     list-style: none;
-    margin: 10px 0; } }
+    margin: 10px 0; }
+
+  .hero__scroll {
+    margin-top: 20vh; } }
 @media (max-width: 420px) {
+  .intro {
+    margin-top: 5vh; }
+    .intro .fadeIn {
+      font-size: 4.5vh;
+      line-height: normal;
+      padding-top: 25px; }
+
   nav li {
     margin: 6px; }
 
   nav li a {
     font-size: 10px; }
 
-  .fadeIn {
-    padding-top: 25px; }
-
   .about-border {
     display: none; }
 
   .hero__scroll {
+    display: none; }
+
+  .social {
     display: none; } }
 
 /*# sourceMappingURL=style.css.map */

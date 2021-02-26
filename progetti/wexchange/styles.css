@@ -1,11 +1,24 @@
 
 body{
-  width: 90vw;
-  height: 90vh;
   padding-top: 0;
-  background-color: #fdf3ec;
+  background-color: #E7E6EA;
 }
 
+.indietro-a-home {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  index: 1;
+}
+
+.indietro-a-home a img {
+  width: 6vh;
+}
+
+.indietro-a-home a img:hover {
+  -webkit-filter: brightness(220%);
+}
 .section{
 	text-align: center;
 }
@@ -14,17 +27,14 @@ body{
   padding-top: 0PX;
   padding-left: 80px;
   padding-right: 80px;
-
 }
 
 .section {
  width: 90vw;
- height: 90vh;
-
+ height: 100vh;
 }
 
 a img {
-
     max-width: 90%;
     max-height: 90%;
 }
